@@ -79,7 +79,7 @@ namespace MauiAppListaComprasM
                         "Produto Removido", "OK");
                 }
             
-            } catch (Exception ex)
+            } catch (Exception e
             {
                 
                 
