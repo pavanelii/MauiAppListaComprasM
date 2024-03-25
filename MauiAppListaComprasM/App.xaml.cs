@@ -1,10 +1,12 @@
-﻿namespace MauiAppListaComprasM
+﻿using MauiAppListaComprasM.Helpers;
+
+namespace MauiAppListaComprasM
 {
     public partial class App : Application
     {
-        static SQLiteDatabaseHelper _db;
+        static SQLiteDataBaserHelper _db;
         
-        public static SQLiteDatabaseHelper Db
+        public static SQLiteDataBaserHelper Db
         {
             get
             {
@@ -15,12 +17,21 @@
                             Environment.SpecialFolder.LocalApplicationData
                             ), "banco_sqlite_compras.db3"
                             );
-                    _db = new SQLiteDatabaseHelper( path );
+                    _db = new SQLiteDataBaserHelper( path );
                 }
             
                 return _db;
             
             }
         }
+    
+        public App()
+        {
+            InitializeComponent();
+
+            MainPage = new AppShell();
+        }
+    
+    
     }
 }

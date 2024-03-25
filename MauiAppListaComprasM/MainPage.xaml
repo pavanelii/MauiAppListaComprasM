@@ -5,8 +5,8 @@
              Title="Minhas Compras">
     <ContentPage.Resources>
         <Style TargetType="Label">
-            <Setter Property="VerticalTextAligment" Value="Center"/>
-            <Setter Property="VerticalOptions" Value="FillAndExspand"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="FillAndExpand"/>
         </Style>
     </ContentPage.Resources>
 
@@ -45,13 +45,12 @@
                     
                     <DataTemplate>
                         
-                        <ViewCell>
-                            
-                            <ViewCell.View.ContextActions>
+                        <ViewCell>                            
+                            <ViewCell.ContextActions>
                                 <MenuItem Text="Remover" Clicked="MenuItem_Clicked_Remover" />
-                            </ViewCell.View.ContextActions>
-                            
-                            <Grid RowDefinitions="Auto" ColumnDefinitions="*, Auto, Auto">
+                            </ViewCell.ContextActions>
+
+                            <Grid ColumnDefinitions="3*,*,*,*">
                                 <Label Grid.Row="0" Grid.Column="0" Text="{Binding Descricao}"/>
                                 <Label Grid.Row="0" Grid.Column="1" Text="{Binding Quantidade}"/>
                                 <Label Grid.Row="0" Grid.Column="2" Text="{Binding Preco}"/>

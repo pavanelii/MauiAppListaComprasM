@@ -1,4 +1,4 @@
-using MauiAppListaComprasM.Models;
+    using MauiAppListaComprasM.Models;
 
 namespace MauiAppListaComprasM.Views;
 
@@ -23,6 +23,7 @@ public partial class NovoProduto2 : ContentPage
 
             await App.Db.Update(p);
             await DisplayAlert("Sucesso!", "Produto Editado!", "OK");
+            await Navigation.PushAsync(new MainPage());
         }
         catch (Exception ex)
         {

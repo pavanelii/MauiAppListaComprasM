@@ -1,5 +1,5 @@
 using MauiAppListaComprasM.Models;
-using Microsoft.UI.Xaml.Automation.Peers;
+
 
 namespace MauiAppListaComprasM.Views;
 
@@ -26,6 +26,7 @@ public partial class EditarProduto : ContentPage
 
 			await App.Db.Update(p);
 			await DisplayAlert("Sucesso!", "Produto Editado!", "OK");
+			await Navigation.PopAsync();
 		} catch(Exception ex) 
 		{
 			await DisplayAlert("Ops", ex.Message, "Fechar"); 
